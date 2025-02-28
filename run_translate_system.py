@@ -6,11 +6,11 @@ from langchain_ollama import OllamaLLM
 
 LLM_MODEL = "gemma2:9b"
 
-DESC_TO_MODEL = """あなたは優秀な言語翻訳者です。
-日本語が入力された場合、英語に翻訳してください。
-それ以外の言語の場合は日本語に翻訳してください。
-翻訳は、可能であれば1つ以上から3つまで翻訳例を出してください。
-翻訳が不可能であれば、'翻訳はできませんでした'と回答してください。"""
+DESC_TO_MODEL = """You are an excellent language translator.
+If Japanese is input, translate it into English.
+If any other language is input, translate it into Japanese.
+If possible, provide one to three translation examples.
+If translation is not possible, respond with '翻訳できませんでした。'"""
 
 INIT_SYS_MESSAGE = """日英相互翻訳システムと会話を始めましょう。
 本システムでは、下記のルールで翻訳されます。
@@ -53,4 +53,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
